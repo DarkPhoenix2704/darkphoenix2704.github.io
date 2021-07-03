@@ -5,18 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
-<link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
-  <script>
-    function openClient() {
-      console.log('Function Called')
-      let subject = document.getElementById("subject").value;
-      let message = document.getElementById("message").value;
-      let send = 'mailto:anbarasun123@gmail.com' + "?subject=" + subject + "&body=" + message;
-      window.open(send);
-    }
-  </script>
   <title>Anbarasu</title>
 </head>
 
@@ -148,30 +140,32 @@
       <h1 class="pb-4 font-semibold text-6xl text-black title-font">Contact Me</h1>
       <p class="text-base font-medium leading-relaxed text-blueGray-700">Just say Hi</p>
       <div class="mt-6">
+        <form action="https://send.pageclip.co/g7ErHwifNYPFSpPMVtfij2epUkJ13Reu/contact-form" class="pageclip-form" method="post">
         <div class="items-center px-18 md:flex">
           <div class="w-full">
             <label class="block mb-2 text-sm text-left font-medium text-gray-600">Name</label>
             <input
               class="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:border-blue-500  focus:outline-none focus:ring"
-              type="text" id="name">
+              type="text" id="name" name="name">
           </div>
           <div class="w-full md:pl-4 lg:pl-4">
-            <label class="block mb-2 text-sm text-left font-medium text-gray-600">Subject</label>
+            <label class="block mb-2 text-sm text-left font-medium text-gray-600">Email</label>
             <input
               class="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:border-blue-500  focus:outline-none focus:ring"
-              type="text" id="subject">
+              type="email" id="email" name="email">
           </div>
         </div>
         <div class="w-full">
           <label class="block mb-2 text-sm text-left font-medium text-gray-600">Message</label>
           <textarea
             class="block w-full px-4 py-2 h-40 text-gray-700 bg-white border border-gray-300 rounded-md focus:border-blue-500  focus:outline-none focus:ring"
-            id="message"></textarea>
+            id="message" name="message"></textarea>
           <div class="flex justify-center pt-6">
-            <button class="px-8 py-2 bg-gray-700 text-white hover:bg-gray-500 rounded-md transition-colors duration-300"
-              onclick="openClient()">Send</button>
+            <button class="pageclip-form__submit px-8 py-2 bg-gray-700 text-white hover:bg-gray-500 rounded-md transition-colors duration-300"
+               type="submit">Send</button>
           </div>
         </div>
+      </form>
       </div>
     </div>
   </section>
@@ -213,6 +207,8 @@
       .delete(17)
       .go();
   </script>
+  <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+
 
 </body>
 
